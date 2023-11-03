@@ -1,0 +1,158 @@
+:root {
+  --normal: #A8A77A;
+  --fire: #EE8130;
+	--water: #6390F0;
+	--electric: #F7D02C;
+	--grass: #7AC74C;
+	--ice: #96D9D6;
+	--fighting: #C22E28;
+	--poison: #A33EA1;
+	--ground: #E2BF65;
+	--flying: #A98FF3;
+	--psychic: #F95587;
+	--bug: #A6B91A;
+	--rock: #B6A136;
+	--ghost: #735797;
+	--dragon: #6F35FC;
+	--dark: #705746;
+	--steel: #B7B7CE;
+	--fairy: #D685AD;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.pokemon, .content {
+  border: black solid 1px;
+  border-radius: 1em;
+  margin: .5rem;
+  padding: .5rem;
+  display: inline-block;
+  background-color: white;
+  transition-duration: 500ms;
+  box-shadow: .5em .5em .25em rgba(0,0,0,.2);
+}
+
+.content {
+  display: block;
+}
+
+.pokemon:hover {
+  background-color: black;
+  color: white;
+  box-shadow: .75em .75em .5em rgba(0,0,0,.2);
+  padding: 1em;
+  margin: 0em;
+}
+
+.pokemon:active {
+  box-shadow: none;
+  transition-duration: 100ms;
+  padding: .25em;
+  margin: .75em;
+}
+
+.information{
+  list-style: none;
+}
+
+.idText {
+  color: gray;
+}
+
+button {
+  margin: .1em;
+  padding: .5em;
+  border-radius: 1em;
+}
+
+body {
+  background-color: lightgray;
+  max-width: 777;
+}
+
+header {
+  padding: 1em;
+  margin-bottom: .5em;
+  background-color: red;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Type colors */
+
+.normal {
+  background-color: var(--normal);
+}
+
+.fire {
+  background-color: var(--fire);
+}
+
+.water {
+  background-color: var(--water);
+}
+
+.electric {
+  background-color: var(--electric);
+}
+
+.grass {
+  background-color: var(--grass);
+}
+
+.ice {
+  background-color: var(--ice);
+}
+
+.fighting {
+  background-color: var(--fighting);
+}
+
+.poison {
+  background-color: var(--poison);
+}
+
+.ground {
+  background-color: var(--ground);
+}
+
+.flying {
+  background-color: var(--flying);
+}
+
+.psychic {
+  background-color: var(--psychic);
+}
+
+.bug {
+  background-color: var(--bug);
+}
+
+.rock {
+  background-color: var(--rock);
+}
+
+.ghost {
+  background-color: var(--ghost);
+}
+
+.dragon {
+  background-color: var(--dragon);
+}
+
+.dark {
+  background-color: var(--dark);
+}
+
+.steel {
+  background-color: var(--steel);
+}
+
+.fairy {
+  background-color: var(--fairy);
+}
