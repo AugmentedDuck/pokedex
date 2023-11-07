@@ -1,7 +1,6 @@
 LoadPokedex();
 const pokemonsRaw = []
 
-
 async function LoadPokedex() {
   let pokedexData;
   let pokedexJSON;
@@ -76,14 +75,16 @@ function PokeSearch() {
   let searchResluts = document.getElementById("searchResults");
   let allPokemons = document.getElementById("pokedex")
 
-  console.log(searchTerm)
+  while (searchResluts.firstChild) {
+    searchResluts.removeChild(searchResluts.lastChild);
+  }
 
   if (searchTerm == null || searchTerm == "") {
     allPokemons.classList.remove("hidden")
     searchResluts.classList.add("hidden")
   } else {
     allPokemons.classList.add("hidden")
-    searchResluts.classList.remove("hidden")
+    searchResluts.classList.remove("hidden")  
   }
 
   const matchingPokemonNames = pokemonsRaw.filter(pokemon => (pokemon.name).toLowerCase().includes(searchTerm.toString().toLowerCase()))
@@ -96,9 +97,6 @@ function PokeSearch() {
 
 function BuildSearchResults(pokemons, searchResluts) {
   for (let i = 0; i < pokemons.length; i++) {
-    
-    //<div class="pokemon" onclick="GoToPokemon('${i + 1}')"><p>${pokedexData.results[i].name}<p><div>
-    
     const pokemon = pokemons[i];
 
     const pokemonDiv = document.createElement("div");
@@ -111,7 +109,7 @@ function BuildSearchResults(pokemons, searchResluts) {
     image.alt = "Image of " + pokemon.name
     image.src = pokemon.image
     
-    pokemonDiv.addEventListener("click", () => GoToPokemon(i + 1));
+    pokemonDiv.addEventListener("click", () => GoToPokemon(pokemon.id));
     
     const idParagraph = document.createElement("p");
     idParagraph.classList.add("idText");
