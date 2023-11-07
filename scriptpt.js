@@ -6,6 +6,11 @@ function GoBack() {
   window.location.href = "index.html"
 }
 
+function GoToPokemon(index) {
+  sessionStorage.setItem("pokeID", index)
+  window.location.href = "pokeinfo.html"
+}
+
 async function BuildTeamSite(teamIDs) {
   const teamList = document.getElementById("teamList");
   const team = []
@@ -24,6 +29,7 @@ async function BuildTeamSite(teamIDs) {
 
     const pokemonDiv = document.createElement("div");
     pokemonDiv.classList.add("pokemon");
+    pokemonDiv.addEventListener("click", () => GoToPokemon(teamID));
     
     const nameParagraph = document.createElement("p");
     nameParagraph.textContent = team[i].name;
