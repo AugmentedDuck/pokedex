@@ -92,7 +92,7 @@ function PokeSearch() {
 
   const mergedPokemons = matchingPokemonNames.concat(matchingPokemonIDs);
 
-  BuildSearchResults(mergedPokemons, searchResluts)
+  BuildSearchResults(mergedPokemons, searchResluts);
 }
 
 function BuildSearchResults(pokemons, searchResluts) {
@@ -106,8 +106,8 @@ function BuildSearchResults(pokemons, searchResluts) {
     nameParagraph.textContent = pokemon.name;
 
     const image = document.createElement("img");
-    image.alt = "Image of " + pokemon.name
-    image.src = pokemon.image
+    image.alt = "Image of " + pokemon.name;
+    image.src = pokemon.image;
     
     pokemonDiv.addEventListener("click", () => GoToPokemon(pokemon.id));
     
