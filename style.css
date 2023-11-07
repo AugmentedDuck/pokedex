@@ -39,6 +39,10 @@
   display: block;
 }
 
+.smallImage {
+  max-height: 1em;
+}
+
 .pokemon:hover {
   background-color: black;
   color: white;
@@ -66,6 +70,17 @@ button {
   margin: .1em;
   padding: .5em;
   border-radius: 1em;
+}
+
+button:hover {
+  margin: 0em;
+  padding: .6em;
+  transition-duration: 500ms;
+}
+
+button:active {
+  margin: .6em;
+  padding: 0em;
 }
 
 body {
